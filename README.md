@@ -20,7 +20,7 @@ Netlify has made this easy. If you click the deploy button below, it will guide 
 
 ## JSON Parameters
 
-Document any necessary JSON parameters here. Provide a sample like the one below:
+The `codename` should be set to the codename of the custom element. If you use the same codename across multiple content types, it will ensure uniqueness across all types.
 
 ```Json
 {

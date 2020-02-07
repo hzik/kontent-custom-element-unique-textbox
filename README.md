@@ -1,8 +1,8 @@
 # TEMPLATE Custom Element for Kentico Kontent
 
-This is a [custom element](https://docs.kontent.ai/tutorials/develop-apps/integrate/integrating-your-own-content-editing-features) for [Kentico Kontent](https://kontent.ai) that allows users INSERT BRIEF DESCRIPTION OF FUNCTIONALITY.
+This is a [custom element](https://docs.kontent.ai/tutorials/develop-apps/integrate/integrating-your-own-content-editing-features) for [Kentico Kontent](https://kontent.ai) that allows you toensure that the entered value is unique across all instances of the element.
 
-<!-- ![Screenshot of custom element](ScreenshotFileName.png) -->
+![Screenshot of custom element](UniqueTextbox.gif)
 
 ## Setup
 
@@ -10,15 +10,13 @@ This is a [custom element](https://docs.kontent.ai/tutorials/develop-apps/integr
     * See [deploying section](#Deploying) for a really quick option
 1. Follow the instructions in the [Kentico Kontent documentation](https://docs.kontent.ai/tutorials/develop-apps/integrate/integrating-your-own-content-editing-features#a-3--displaying-a-custom-element-in-kentico-kontent) to add the element to a content model.
     * The `Hosted code URL` is where you deployed to in step 1
-    * If necessary, pass the necessary parameters as directing in the [JSON Parameters configuration](#json-parameters) section of this readme.
+    * Pass the necessary parameters as directing in the [JSON Parameters configuration](#json-parameters) section of this readme.
 
 ## Deploying
 
 Netlify has made this easy. If you click the deploy button below, it will guide you through the process of deploying it to Netlify and leave you with a copy of the repository in your GitHub account as well.
 
-***UPDATE THE REPOSITORY URL BELOW***
-
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/ChristopherJennings/kontent-custom-element-sample-template)
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/Kentico/kontent-custom-element-unique-textbox)
 
 ## JSON Parameters
 
@@ -26,27 +24,15 @@ Document any necessary JSON parameters here. Provide a sample like the one below
 
 ```Json
 {
-  "googleApiKey": "YOUR_GOOGLE_API_KEY",
-  "center": {
-    "lat": -25.344,
-    "lng": 131.036
-  }
+    "codename": "unique_element",
+    "previewApiKey": "[your-preview-api-key]"
 }
 ```
 
 ## Saved Value
 
-The value is saved as a string representing a JSON object. When deserialized, it will look like:
-
-```Json
-{
-  "sample" : "This is a sample of the value your custom element saves",
-  "complex": {
-    "canBeComplex":true
-  }
-}
-```
+The value is saved as a string representing the entered text.
 
 ## Contributors
 
-Originally contributed by [@{USER}](https://github.com/{USER}/)
+Originally contributed by [@hzik](https://github.com/hzik/)

@@ -161,7 +161,7 @@
       function isUnique(text) {
         if (text != "") {
           var urlUnique =
-            "https://deliver.kontent.ai/"+projectId+"/items" + "?elements." + codename + "=" + text + "&depth=0";
+            "https://preview-deliver.kontent.ai/"+projectId+"/items" + "?elements." + codename + "=" + text + "&depth=0";
           $.ajax({
             url: urlUnique,
             headers: {

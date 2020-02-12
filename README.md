@@ -1,4 +1,4 @@
-# TEMPLATE Custom Element for Kentico Kontent
+# Unique textbox
 
 This is a [custom element](https://docs.kontent.ai/tutorials/develop-apps/integrate/integrating-your-own-content-editing-features) for [Kentico Kontent](https://kontent.ai) that allows you toensure that the entered value is unique across all instances of the element.
 
@@ -32,7 +32,3 @@ The `codename` should be set to the codename of the custom element. If you use t
 ## Saved Value
 
 The value is saved as a string representing the entered text.
-
-## Contributors
-
-Originally contributed by [@hzik](https://github.com/hzik/)

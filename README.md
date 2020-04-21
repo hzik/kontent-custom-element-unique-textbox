@@ -1,8 +1,26 @@
 # Unique textbox
 
-This is a [custom element](https://docs.kontent.ai/tutorials/develop-apps/integrate/integrating-your-own-content-editing-features) for [Kentico Kontent](https://kontent.ai) that allows you toensure that the entered value is unique across all instances of the element.
+This custom element check whether your entered value is unique across all items in your project in specified element:
 
 ![Screenshot of custom element](UniqueTextbox.gif)
+
+## Configuration
+
+```json
+{
+    "codename": "unique_element",
+    "request_repeater": "https://x2jp66x1y92.execute-api.eu-central-1.amazonaws.com/default/requestRepeater"
+}
+```
+
+You need to specify both `codename` parameter for the element code name you want to check for unique values and you need to link your repeater in the `request_repeater` parameter.
+
+To set up `request_repeater` above, please follow [Working with sensitive data in custom elements](https://docs.kontent.ai/tutorials/develop-apps/integrate/working-with-sensitive-data-in-custom-elements).
+In **Step 2: Configuring your Lambda function**, use the following keys and values in the **Environment variables** section:
+  - `BEARER_TOKEN`: `<Preview Delivery API key>`
+  - `HOST`: `preview-delivery.kontent.ai`
+  - `PATH`: `/<Project ID>/items`
+
 
 ## Setup
 
@@ -18,17 +36,4 @@ Netlify has made this easy. If you click the deploy button below, it will guide 
 
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/hzik/kontent-custom-element-unique-textbox)
 
-## JSON Parameters
 
-The `codename` should be set to the codename of the custom element. If you use the same codename across multiple content types, it will ensure uniqueness across all types.
-
-```Json
-{
-    "codename": "unique_element",
-    "previewApiKey": "[your-preview-api-key]"
-}
-```
-
-## Saved Value
-
-The value is saved as a string representing the entered text.

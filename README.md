@@ -36,4 +36,14 @@ Netlify has made this easy. If you click the deploy button below, it will guide 
 
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/hzik/kontent-custom-element-unique-textbox)
 
+## Output
 
+The JSON output of such an element would look like this:
+
+```json
+ "unique_element": {
+        "type": "custom",
+        "name": "Unique element",
+        "value": "abcd"
+      }
+```
